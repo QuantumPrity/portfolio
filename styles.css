@@ -221,7 +221,7 @@ html {
 
 /* SKILLS */
 
-skills-card {
+.skills-card {
     display: flex;
     flex-wrap: wrap;
     gap: 12px;
@@ -237,7 +237,7 @@ skills-card {
     font-size: 14px;
     font-weight: 600;
     text-decoration: none;
-    transition: all 0.25 ease;
+    transition: all 0.25s ease;
 
 }
 
@@ -365,4 +365,5 @@ skills-card {
         justify-content: center;
     }
 } 
+
 
