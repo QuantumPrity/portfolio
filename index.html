@@ -6,12 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simple Landing Page</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 </head>
 
 <body>
-
+    <div id="app">
     <!-- Navbar -->
-     <header class="navbar">
+    <header class="navbar">
         <div class="logo">Prity</div>
 
         <nav class="nav-links">
@@ -20,10 +21,10 @@
             <a href="#">About</a>
             <a href="#">Contact</a>
         </nav>
-     </header>
+    </header>
 
-     <!-- Hero Section -->
-      <main class="hero">
+    <!-- Hero Section -->
+    <main class="hero">
         <div class="hero-text">
             <h1>Frontend developer focused on <br> <span class="highlight"> clean & responsive UI </span></h1>
             <p>
@@ -40,11 +41,11 @@
             <img src="logo.png" alt="Hero illustration">
         </div>
 
-      </main>
+    </main>
 
-      <!-- Projects Section -->
+    <!-- Projects Section -->
 
-      <section class="projects" id="projects">
+    <section class="projects" id="projects">
         <h2>My Projects</h2>
 
         <div class="project-grid">
@@ -59,10 +60,10 @@
                 <a href="#">View Projects</a>
             </div>
         </div>
-      </section>
+    </section>
 
-      <!--About Me Section-->
-      <section class="profile" id="profile">
+    <!--About Me Section-->
+    <section class="profile" id="profile">
         <h2>About Me</h2>
 
       <div class="profile-content">
@@ -85,7 +86,7 @@
 
         </div>
       </div> 
-      </section>
+    </section>
 
       <section class="contact" id="contact">
         <h2>Contact Me</h2>
@@ -107,6 +108,17 @@
       </section>
       
 
+
+    </div>
+
+    <script>
+        const { createApp } = Vue
+        createApp({
+            data() {
+                return {}
+            }
+        }).mount('#app')
+    </script>
 </body>
 
 </html>
