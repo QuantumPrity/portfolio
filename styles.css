@@ -42,6 +42,12 @@ body {
     color: #0655fe;
 }
 
+.nav-links a.active {
+  color: blue;
+  font-weight: bold;
+  border-bottom: 2px solid blue;
+}
+
 /*-- Hero Section --*/
 .hero {
     display: flex;
