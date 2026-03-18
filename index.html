@@ -82,10 +82,11 @@
                             {{ showAllSkills ? 'Show Less' : 'Show More Skills' }}
                         </button>
                             
-                        </div>
-                        <p>Currently building frontend projects and improving UI Skills</p>
-
                     </div>
+
+                    <p>Currently building frontend projects and improving UI Skills</p>
+
+                
 
                 </div>
             </div> 
@@ -93,16 +94,20 @@
 
         <section class="contact" id="contact">
             <h2>Contact Me</h2>
-        
-            <div class="profile-contact">
-                <p>Interested in working together or just want to say it hi? </p>
+            <p>Interested in working together or just want to say hi?</p>
+
+            <div v-if="submitted">
+                <p>Thanks {{ form.name }}! I'll get back to you soon. 🎉</p>
             </div>
 
-            <div class="contact-cards">
-                <a href="#">Email</a>
-                <a href="#">LinkedIn</a>
-                <a href="#">GitHub</a>
-            </div>
+            <form v-else @submit.prevent="submitted = true ">
+                <input type="text" v-model="form.name" placeholder="Your Name" required />
+                <input type="email" v-model="form.email" placeholder="Your Email" required />
+                <textarea v-model="form.message" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        
+            
 
         </section>
 
@@ -119,6 +124,12 @@
                 return {
                     activeSection: 'home',
                     showAllSkills: false,
+                    form: {
+                        name: '',
+                        email: '',
+                        message: ''
+                    },
+                    submitted: false,
                     projects: [
                         {
                             title: 'Digital Business Card',
