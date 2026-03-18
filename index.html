@@ -69,15 +69,23 @@
 
                     <div class="skills">
                         <div class="skills-card">
-                            <a href="#">HTML</a>
-                            <a href="#">CSS</a>
-                            <a href="#">Responsive Design</a>
-                            <a href="#">UI Layout</a>
-                            <a href="#">JavaScript</a>
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>Responsive Design</span>
+                            <span>UI Layout</span>
+                            <span>JavaScript</span>
+                            <span v-show="showAllSkills">Vue.js</span>
+                            <span v-show="showAllSkills">Git</span>
                         </div>
-                    </div>
 
-                    <p>Currently building frontend projects and improving UI Skills</p>
+                        <button @click="showAllSkills = !showAllSkills">
+                            {{ showAllSkills ? 'Show Less' : 'Show More Skills' }}
+                        </button>
+                            
+                        </div>
+                        <p>Currently building frontend projects and improving UI Skills</p>
+
+                    </div>
 
                 </div>
             </div> 
@@ -110,6 +118,7 @@
             data() {
                 return {
                     activeSection: 'home',
+                    showAllSkills: false,
                     projects: [
                         {
                             title: 'Digital Business Card',
